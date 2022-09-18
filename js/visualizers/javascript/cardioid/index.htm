@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cardioid Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body>
+    <button id="resume" style="display: none;" onclick="update = true;">Resume</button>
+    <div class="power" align="center">
+        <label for="power" align="center">power: </label>
+        <input type="text" id="power">
+        <button id="power1" onclick="power = parseFloat(document.getElementById('power').value); reset(0)">Set</button>
+    </div>
+    <canvas id="canvas"></canvas>
+    <canvas id="canvas2"></canvas>
+    <div class="explanation" align="center">
+        <br>
+        <br>
+        <h1>How Does it Work?</h1>
+        <br>
+        <p align="center">This algorithm works by drawing lines between dots
+            which are moving around a circle. </p>
+        <p align="left">
+            <br>
+            <br>
+            &emsp; To start off, 1000
+            dots are placed around a larger circle, spaced equally.
+            Dots are paired with the dot positioned directly across
+            from it on the circle. 
+            <br>
+            <br>
+            &emsp;Next, each dot is given a speed
+            at which it moves around the larger circle. The speed given
+            is determined by raising the number to which number the dot corresponds
+            to a cetain power.
+            For example when the power is 2, the 1st dot is given a speed of 1 unit,
+            the 2nd dot is given a speed of 4 units, the 3rd is
+            given a speed of 9 units, and so on. If the power was 3, the speed of the
+            2nd dot would be 8.
+            <br>
+            <br>
+            &emsp;As a dot moves, a line
+            is drawn between it and the dot to which it was paired
+            at the start of the process. When the power to which a dot's
+            speed is raised is equal to 2, the shape created by the lines
+            after a determined amount of time - when a designated dot(the one you
+            can see moving around the circle) reaches a specific location - is a 
+            <a href="https://en.wikipedia.org/wiki/Cardioid" target="_blank", title="Wikpedia">Cardioid</a>.
+            As this power increases, different variations of cardioids are created.
+            After letting the algorithm run for multiple revolutions, more complex variations
+            of cardioids often seem to appear, overlapping simpler variations.
+            <br>
+            <br>
+            &emsp;In the first demonstration, the power remains constant but can be changed. 
+            In the second demonstration, the power is slowly increasing and the patterns created
+            by different powers can be seen.
+        </p>
+        <br>
+        <br>
+        <p align="center">
+            <u>You can change the power value in the textbox at the bottom
+            of the first demonstration!</u>
+        </p>
+        <br>
+        <br>
+    </div>
+    <script src="http://willfs.com/canvas_helper.js"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>

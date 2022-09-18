@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: black;
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-weight: 100;
+    width: 80%
+}
+
+p {
+    width: 80%;
+}
+
+br {
+    width: 0;
+}
+
+a {
+    color: rgb(245, 66, 111);
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: rgb(255, 100, 150);
+}
+
+button {
+    padding: 2px 5px 2px 5px;
+    color: white;
+    background: black;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 3vh;
+}
+
+button:hover {
+    color: black;
+    background: white;
+}
+
+input {
+    width: 10vw;
+    margin: 0 25px 0 25px;
+}
+
+#resume {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+}
+
+input {
+    font-size: 2vh;
+    height: 3vh;
+}
+
+.power {
+    position: absolute;
+    left: 0;
+    top: calc(100vh - 30px);
+    width: 100%;
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.power label {
+    color: white;
+    margin-right: -10px;
+}
+
+.explanation {
+    color: white;
+    width: 100vw;
+    padding-bottom: 300px;
+}

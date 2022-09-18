@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Colors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        a {
+            position: fixed;
+            top: calc(100vh - 100px);
+            left: calc(100vw/3);
+            border: 2px solid white;
+            text-align: center;
+            border-radius: 5px;
+            line-height: calc((100vh - 200px)/4 - 65px);
+            width: calc(100vw/3);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        a:hover {
+            background: rgba(255, 255, 255, 0.05)
+        }
+
+        p {
+            position: fixed;
+            top: calc(100vh - 189px + (100vh - 200px)/4);
+            left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script src="http://willfs.com/canvas_helper.js"></script>
+
+    <a onclick="doIt()">reload</a>
+
+    <p id="color"></p>
+
+    <script src="main.js"></script>
+</body>
+</html>

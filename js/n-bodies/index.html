@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Gravity Simulation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="buttons-container">
+        <button id="pause" onclick="pause()">Pause</button>
+        <button id="restart" onclick="reset()">Restart</button>
+        <button id="reload" onclick="reset(); randomize()">Randomize</button>
+        <div class="show-trails-container">
+            <label for="show-trails" align="center">Show trails</label>
+            <input type="checkbox" id="show-trails" onclick="trails()">
+        </div>
+    </div>
+    <input type="button" id="n+" class="controls" value="+" style="position: absolute; top: 130px; left: 200px; width: 20px;" onclick="num++; reset(); randomize();">
+    <input type="button" id="n-" class="controls" value="-" style="position: absolute; top: 130px; left: 230px; width: 20px;"onclick="if (num > 2){num--; reset(); randomize();}">
+    <input type="button" id="s+" class="controls" value="+" style="position: absolute; top: 170px; left: 200px; width: 20px;"onclick="speed += 2;">
+    <input type="button" id="s-" class="controls" value="-" style="position: absolute; top: 170px; left: 230px; width: 20px;" onclick="if (speed > 2) {speed -= 2}">
+    <input type="button" id="d+" class="controls" value="+" style="position: absolute; top: 212.5px; left: 200px; width: 20px;"onclick="max_space += 2;">
+    <input type="button" id="d-" class="controls" value="-" style="position: absolute; top: 212.5px; left: 230px; width: 20px;" onclick="if (max_space > 2) {max_space-=2;}">
+    <input type="button" id="m+" class="controls" value="+" style="position: absolute; top: 245px; left: 200px; width: 20px;"onclick="max_zoom += 0.1;">
+    <input type="button" id="m-" class="controls" value="-" style="position: absolute; top: 245px; left: 230px; width: 20px;" onclick="if(max_zoom > 0.11) max_zoom -= 0.1;">
+    <script src="http://willfs.com/canvas_helper.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

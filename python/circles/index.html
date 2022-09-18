@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Drawing with Circles</title>
+    <script src="http://willfs.com/python/visual//skulpt_dist/skulpt.min.js" type="text/javascript"></script>
+    <script src="http://willfs.com/python/visual/skulpt_dist/skulpt-stdlib.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<h1 align="center">Drawing with Circles</h1>
+<main>
+    <div class="container">
+        <div class="editor-container">
+            <div id="editor"></div>
+            <button id="runbutton">Run</button>
+        </div>
+    </div>
+    <div class="output-container">
+        <button id="exit" onclick="Sk.insertEvent('quit'); sessionStorage.setItem('code', ace.edit('editor').getValue()); location.reload()">exit</button>
+        <div class="canvas-container"></div>
+        <div id="output"></div>
+    </div>
+</main>
+<div align="center">
+    <p>run using <a href="https://skulpt.org/" target="_blank">Skulpt</a> and <a href="https://github.com/Petlja/pygame4skulpt" target="_blank">pygame4skulpt</a></p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/chrome");
+    editor.session.setMode("ace/mode/python");
+</script>
+<script src="script.js"></script>
+</body>
+</html>
+

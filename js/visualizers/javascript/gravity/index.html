@@ -1,0 +1,131 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Gravity Simulation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body>
+    <div class="buttons-container">
+        <button id="add_body" onclick="add_body()">Add Body</button>
+        <button id="run" onclick="main_loop()">Run</button>
+        <button id="trajectory" onclick="calc_trajectory(false)">Calculate Trajectory</button>
+        <button id="pause" onclick="pause()" style="display: none;">Pause</button>
+        <button id="stop" onclick="stop()" style="display: none;">Stop</button>
+        <div class="show-trails-container" style="display: none;">
+            <label for="show-trails" align="center">Show trails</label>
+            <input type="checkbox" id="show-trails" onclick="trails()">
+        </div>
+    </div>
+    <div class="add_body">
+        <button id="add" onclick="add()">Add</button>
+        <div class="show-trajectory-container">
+            <label for="show-trajectory" align="center">Show trajectories</label>
+            <input type="checkbox" id="show-trajectory" onclick="check()">
+        </div>
+        <div class="rows">
+            <div class="row" id="row1">
+                <div id="x-input">
+                    <label for="x">x: </label>
+                    <input type="text" id="x" />
+                </div>
+                <div id="y-input">
+                    <label for="y">y: </label>
+                    <input type="text" id="y" />
+                </div>
+                <div id="x-vel-input">
+                    <label for="x_vel">x velocity: </label>
+                    <input type="text" id="x_vel" />
+                </div>
+                <div id="y-vel_input">
+                    <label for="y_vel">y velocity: </label>
+                    <input type="text" id="y_vel" />
+                </div>
+                <div id="radius-input">
+                    <label for="radius">radius: </label>
+                    <input type="text" id="radius" />
+                </div>
+                <div id="mass-input">
+                    <label for="mass">mass: </label>
+                    <input type="text" id="mass" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="color-input">
+                    <label>COLOR: </label>
+                    <div id="r-input">
+                        <label for="r">r: </label>
+                        <input type="text" id="r" />
+                    </div>
+                    <div id="g-input">
+                        <label for="g">g: </label>
+                        <input type="text" id="g" />
+                    </div>
+                    <div id="b-input">
+                        <label for="b">b: </label>
+                        <input type="text" id="b" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="cancel" onclick="cancel()">cancel</button>
+    </div>
+    <div class="edit_body">
+        <button id="delete" onclick="delete_body()">Delete Body</button>
+        <div class="show-trajectory-container">
+            <label for="show-trajectory1" align="center">Show trajectories</label>
+            <input type="checkbox" id="show-trajectory1" onclick="check()">
+        </div>
+        <div class="rows">
+            <div class="row" id="row1">
+                <div id="x-input1">
+                    <label for="x1">x: </label>
+                    <input type="text" id="x1" />
+                </div>
+                <div id="y-input1">
+                    <label for="y1">y: </label>
+                    <input type="text" id="y1" />
+                </div>
+                <div id="x-vel-input1">
+                    <label for="x_vel1">x velocity: </label>
+                    <input type="text" id="x_vel1" />
+                </div>
+                <div id="y-vel_input1">
+                    <label for="y_vel1">y velocity: </label>
+                    <input type="text" id="y_vel1" />
+                </div>
+                <div id="radius-input1">
+                    <label for="radius1">radius: </label>
+                    <input type="text" id="radius1" />
+                </div>
+                <div id="mass-input1">
+                    <label for="mass1">mass: </label>
+                    <input type="text" id="mass1" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="color-input1">
+                    <label>COLOR: </label>
+                    <div id="r-input1">
+                        <label for="r1">r: </label>
+                        <input type="text" id="r1" />
+                    </div>
+                    <div id="g-input1">
+                        <label for="g1">g: </label>
+                        <input type="text" id="g1" />
+                    </div>
+                    <div id="b-input1">
+                        <label for="b1">b: </label>
+                        <input type="text" id="b1" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="exit" onclick="exit()">Exit</button>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="bodies.js"></script>
+    <script src="gui.js"></script>
+
+</body>
+</html>

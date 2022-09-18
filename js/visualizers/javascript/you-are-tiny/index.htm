@@ -1,0 +1,82 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>You Are Tiny</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background: black;
+            color: white;
+        }
+
+        .labels {
+            position: absolute;
+            background: black;
+            left: 0;
+            top: 10px;
+            width: 200px;
+            height: 20px;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .label-container {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            padding-left: 20px;
+        }
+
+        .label {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        #you {
+            background: white;
+        }
+
+        #earth {
+            background: rgb(20, 150, 50);
+        }
+
+        #sun {
+            background: yellow;
+        }
+
+        #largest {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="labels">
+        <div class="label-container">
+            <div class="label" id="you"></div>
+            <p>you</p>
+        </div>
+        <div class="label-container">
+            <div class="label" id="earth"></div>
+            <p>earth</p>
+        </div>
+        <div class="label-container">
+            <div class="label" id="sun"></div>
+            <p>our sun</p>
+        </div>
+        <div class="label-container">
+            <div class="label" id="largest"></div>
+            <p>largest known star</p>
+        </div>
+    </div>
+
+    <script src="http://willfs.com/canvas_helper.js"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>

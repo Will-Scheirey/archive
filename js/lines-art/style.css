@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+#generate, #menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 50px;
+    background:rgb(44, 47, 51);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 0 0 10px 0;
+    cursor: pointer;
+    transition: filter .3s;
+    z-index: 100;
+}
+
+.menu-container {
+    height: 100vh;
+    width: 100vw;
+    background: rgb(35, 39, 42);
+    position: absolute;
+    color: white;
+    transform-origin: top;
+}
+
+.menu {
+    width: 100vw;
+    height: 100vh;
+    max-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header header header header"
+    "colors colors size size movement movement"
+    "colors colors size size movement movement"
+    "colors colors size size movement movement";
+}
+    .limit-slider {
+        appearance: none;
+        background: rgb(153, 170, 181);
+        height: 5px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    .limit-slider:focus {
+        outline: none;
+    }
+
+    .limit-slider::-webkit-slider-thumb {
+        appearance: none;
+        height: 17px;
+        width: 17px;
+        border-radius: 100%;
+        background:rgb(114, 137, 218);
+    }
+    
+    .limit-slider::-moz-range-thumb {
+        appearance: none;
+        height: 17px;
+        width: 17px;
+        border-radius: 100%;
+        background:rgb(114, 137, 218);
+    }
+
+    .colors {
+        grid-area: colors;
+        display: grid;
+        grid-template:
+        "colors-header colors-header"
+        "r-lower r-upper"
+        "g-lower g-upper"
+        "b-lower b-upper"
+        ". .";
+    }
+
+    .colors h1, .size h1, .movement h1 {
+        text-align: center;
+    }
+
+    .colors h1 {
+        grid-area: colors-header;
+    }
+
+        .color-limit, .size-limit, .movement-limit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .color-limit-container, .size-limit-container, .movement-limit-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+            }
+
+                #lower-r {
+                    grid-area: r-lower;
+                }
+
+                #upper-r {
+                    grid-area: r-upper;
+                }
+
+                #lower-g {
+                    grid-area: g-lower;
+                }
+
+                #upper-g {
+                    grid-area: g-upper;
+                }
+
+                #lower-b {
+                    grid-area: b-lower;
+                }
+
+                #upper-b {
+                    grid-area: b-upper;
+                }
+
+    .size {
+        grid-area: size;
+        display: grid;
+        grid-template: 
+        "size-header size-header"
+        "size-lower size-upper"
+        "size-scale size-scale"
+        "size-change size-change"
+        ". .";
+    }
+
+        .size h1 {
+            grid-area: size-header;
+        }
+
+        #size-lower {
+            grid-area: size-lower;
+        }
+
+        #size-upper {
+            grid-area: size-upper;
+        }
+
+        #size {
+            grid-area: size-scale;
+        }
+
+        #size-change {
+            grid-area: size-change;
+        }
+    
+    .movement {
+        grid-area: movement;
+        display: grid;
+        grid-template:
+        "movement-header movement-header"
+        "variation variation"
+        ". .";
+    }
+
+        .movement h1 {
+            grid-area: movement-header;
+        }
+
+        #variation {
+            grid-area: variation;
+        }
+
+            
+
+#menu {
+    left: calc(50% - 50px);
+    border-radius: 0 0 10px 10px;
+    border-left: 1px solid white;
+    z-index: 100;
+}
+
+#generate:hover, #menu:hover {
+    filter: brightness(150%);
+}

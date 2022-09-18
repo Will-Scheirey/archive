@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Wordle Infinite</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="board">
+            <div class="row" id="row1">
+                <div class="letter" id="empty" >
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="keyboard">
+            <div class="keyboard-row">
+                    <button class="key" onclick="guessLetter(this.innerHTML)"">Q</button>
+            </div>
+            <div class="keyboard-row"></div>
+            <div class="keyboard-row"></div>
+        </div>
+
+        <script src="allwords.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

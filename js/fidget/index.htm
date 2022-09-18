@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fidget</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        canvas {
+            cursor: none;
+        }
+
+        .menu {
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+            width: 200px;
+            height: calc(100vh - 55px);
+            padding-top: 55px;
+            background: rgb(10, 3, 25);
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            height: inherit;
+            justify-content: space-evenly;
+        }
+
+        .buttons-container a {
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid white;
+            cursor: pointer;
+            padding: 2px 15px 2px 15px;
+            transition: 0.2s;
+        }
+
+        .buttons-container a:hover {
+            background: white;
+            color: rgb(10, 3, 25);
+        }
+
+        #menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 25px;
+            padding-left: 5px;
+            padding-top: 2px;
+            cursor: default;
+            background: rgb(5, 0, 12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        #menu:hover {
+            text-decoration: underline;
+            text-decoration-color: white;
+        }
+
+        .show_stats {
+            position: relative;
+            left: 5px;
+            top: -25px;
+            width: 120px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <a id="menu" onclick="menu()">menu</a>
+    <div class="menu">
+        <div class="show_stats"><label for="show_stats">Show Stats</label> <input id="show_stats" type="checkbox" checked="true"  onclick="changeShowStats()"></div>
+        <div class="buttons-container">
+            <a onclick="changeMode('click_box')">Click on boxes</a>
+            <a onclick="changeMode('box_grid')">Move a box around a grid</a>
+        </div>
+    </div>
+
+    
+    <script src="http://willfs.com/canvas_helper.js"></script> 
+    <script src="main.js"></script>
+    <script src="gui.js"></script>
+</body>
+</html>

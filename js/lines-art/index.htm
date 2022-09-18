@@ -1,0 +1,119 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <a id="generate" onclick="generate()">Generate</a>
+    <a id="menu" onclick="toggleMenu()">Menu</a>
+    <div class="menu-container">
+        <div class="menu">
+            <div class="colors">
+                <h1>Colors</h1>
+                <div class="color-limit" id="r-lower">
+                    <div class="color-limit-container">
+                        <label for="r-lower-limit">Lower Red Limit</label>
+                        <input class="limit-slider" id="r-lower-limit" type="range" min="0" max="255" value="0" oninput="updateLimit(this)">
+                        <label id="r-lower-limit-value"></label>
+                    </div>
+                </div>
+                <div class="color-limit" id="r-upper">
+                    <div class="color-limit-container">
+                        <label for="r-upper-limit">Upper Red Limit</label>
+                        <input class="limit-slider" id="r-upper-limit" type="range" min="0" max="255" value="255" oninput="updateLimit(this)"">
+                        <label id="r-upper-limit-value"></label>
+                    </div>
+                </div>
+    
+                <div class="color-limit" id="g-lower">
+                    <div class="color-limit-container">
+                        <label for="g-lower-limit">Lower Green Limit</label>
+                        <input class="limit-slider" id="g-lower-limit" type="range" min="0" max="255" value="0" oninput="updateLimit(this)">
+                        <label id="g-lower-limit-value"></label>
+                    </div>
+                </div>
+                <div class="color-limit" id="g-upper">
+                    <div class="color-limit-container">
+                        <label for="g-upper-limit">Upper Green Limit</label>
+                        <input class="limit-slider" id="g-upper-limit" type="range" min="0" max="255" value="255" oninput="updateLimit(this)"">
+                        <label id="g-upper-limit-value"></label>
+                    </div>
+                </div>
+    
+                <div class="color-limit" id="b-lower">
+                    <div class="color-limit-container">
+                        <label for="b-lower-limit">Lower Blue Limit</label>
+                        <input class="limit-slider" id="b-lower-limit" type="range" min="0" max="255" value="0" oninput="updateLimit(this)">
+                        <label id="b-lower-limit-value"></label>
+                    </div>
+                </div>
+                <div class="color-limit" id="b-upper">
+                    <div class="color-limit-container">
+                        <label for="b-upper-limit">Upper Blue Limit</label>
+                        <input class="limit-slider" id="b-upper-limit" type="range" min="0" max="255" value="255" oninput="updateLimit(this)">
+                        <label id="b-upper-limit-value"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="size">
+                <h1>Size</h1>
+                <div class="size-limit" id="size-lower">
+                    <div class="size-limit-container">
+                        <label for="size-lower-limit">Lower Size Limit</label>
+                        <input class="limit-slider" id="size-lower-limit" type="range" min="1" max="20" value="5" oninput="updateLimit(this)">
+                        <label id="size-lower-limit-value"></label>
+                    </div>
+                </div>
+                <div class="size-limit" id="size-upper">
+                    <div class="size-limit-container">
+                        <label for="size-upper-limit">Upper Size Limit</label>
+                        <input class="limit-slider" id="size-upper-limit" type="range" min="1" max="20" value="10" oninput="updateLimit(this)">
+                        <label id="size-upper-limit-value"></label>
+                    </div>
+                </div>
+                <div class="size-limit" id="size">
+                    <div class="size-limit-container">
+                        <label for="size-scale">Size Scale</label>
+                        <input class="limit-slider" id="size-scale" type="range" min="1" max="10" value="5" oninput="updateLimit(this)">
+                        <label id="size-scale-value"></label>
+                    </div>
+                </div>
+                <div class="size-limit" id="size-change">
+                    <div class="size-limit-container">
+                        <label for="terminal-size-change">Terminal Size Change</label>
+                        <input class="limit-slider" id="terminal-size-change" type="range" min="1" max="20" value="10" oninput="updateLimit(this)">
+                        <label id="terminal-size-change-value"></label>
+                    </div>
+                </div>
+                <!--
+                <div class="size-limit" id="number">
+                    <div class="size-limit-container">
+                        <label for="numer-objects">Number of Objects</label>
+                        <input class="limit-slider" id="number-objects" type="range" min="100" max="2000" value="1000" oninput="updateLimit(this)">
+                        <label id="number-objects-value"></label>
+                    </div>
+                </div>
+                -->
+            </div>
+            <div class="movement">
+                <h1>Movement</h1>
+                <div class="movement-limit" id="variation">
+                    <div class="movement-limit-container">
+                        <label for="variation-slider">Random Variation from Center</label>
+                        <input class="limit-slider" id="variation-slider" type="range" min="0" max="100" value="0" oninput="updateLimit(this)">
+                        <label id="variation-slider-value"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <canvas id="canvas"></canvas>
+    <script src="http://willfs.com/canvas_helper.js"></script>
+
+    <script src="main.js"></script>
+    <script src="gui.js"></script>
+</body>
+</html>
